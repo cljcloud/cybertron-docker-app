@@ -2,6 +2,32 @@
 
 FIXME: description
 
+## Docker build
+
+docker build ./simple-clj-api \
+             -f ./simple-clj-api/Dockerfile \
+             -t simple-clj-api:latest
+
+
+## Docker run
+
+docker run -p 80:80 \
+           -e PORT="80" \
+           -it simple-clj-api:latest
+
+
+## Docker publish
+https://blog.codecentric.de/github-container-registry
+
+docker login ghcr.io -u cljcloud
+
+Enter personal access token with packages read/write/delete permissions
+
+docker tag simple-clj-api:latest ghcr.io/cljcloud/simple-clj-api:latest
+
+docker push ghcr.io/cljcloud/simple-clj-api:latest
+
+
 ## Installation
 
 Download from http://example.com/FIXME.
