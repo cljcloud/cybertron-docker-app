@@ -1,5 +1,3 @@
-LABEL org.opencontainers.image.source="https://github.com/cljcloud/cybertron-docker-app"
-
 FROM clojure:openjdk-17-lein AS deps
 
 RUN mkdir /app
@@ -20,6 +18,8 @@ WORKDIR /app
 RUN lein uberjar
 
 FROM eclipse-temurin:17-jre-alpine AS deploy
+
+LABEL org.opencontainers.image.source="https://github.com/cljcloud/cybertron-docker-app"
 
 COPY --from=uberjar /app/target/uberjar/simple-clj-api-0.1.0-SNAPSHOT-standalone.jar /simple-clj-api.jar
 

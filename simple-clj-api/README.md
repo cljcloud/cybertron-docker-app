@@ -6,14 +6,14 @@ FIXME: description
 
 docker build ./simple-clj-api \
              -f ./simple-clj-api/Dockerfile \
-             -t simple-clj-api:latest
+             -t ghcr.io/cljcloud/simple-clj-api:latest
 
 
 ## Docker run
 
 docker run -p 80:80 \
            -e PORT="80" \
-           -it simple-clj-api:latest
+           -it ghcr.io/cljcloud/simple-clj-api:latest
 
 
 ## Docker publish
