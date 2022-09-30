@@ -1,3 +1,5 @@
+LABEL org.opencontainers.image.source="https://github.com/cljcloud/cybertron-docker-app"
+
 FROM clojure:openjdk-17-lein AS deps
 
 RUN mkdir /app
