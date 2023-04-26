@@ -36,7 +36,7 @@
                                                                            :description "Enter bearer token in format **Bearer &lt;token>"}}
                                            }
                                  :handler (rs/create-swagger-handler)}}]
-         ["/hello2" {
+         ["/hello3" {
                     :swagger {:security [{:apiAuth []}]}
                     ;;:middleware [auth]
                     :get     {:summary    "GET hello"
